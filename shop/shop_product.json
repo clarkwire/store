@@ -1,0 +1,54 @@
+[
+    {
+        "available": "1",
+        "category_id": "1",
+        "created": "2019-01-17 16:14:06.482149",
+        "description": "5 pole DIN cable connector, silver plated contacts",
+        "id": "1",
+        "image": "product/nys322.jpg",
+        "name": "NYS322",
+        "price": "0.93",
+        "slug": "5-PinDin",
+        "stock": "71",
+        "updated": "2019-01-17 16:14:06.482149"
+    },
+    {
+        "available": "1",
+        "category_id": "1",
+        "created": "2019-01-17 16:28:09.663376",
+        "description": "7 pole DIN cable connector, silver plated contacts",
+        "id": "2",
+        "image": "product/nys323.jpg",
+        "name": "NYS323",
+        "price": "1.06",
+        "slug": "7-Pin-MaleDin",
+        "stock": "11",
+        "updated": "2019-01-17 16:28:09.663376"
+    },
+    {
+        "available": "1",
+        "category_id": "1",
+        "created": "2019-01-17 16:29:54.320362",
+        "description": "5 pole DIN chassis connector, silver plated contacts",
+        "id": "3",
+        "image": "product/nys325.jpg",
+        "name": "NYS325",
+        "price": "0.45",
+        "slug": "5-Pin-Female-Panelmount",
+        "stock": "55",
+        "updated": "2019-01-17 16:33:36.444067"
+    },
+    {
+        "available": "1",
+        "category_id": "1",
+        "created": "2019-01-17 16:32:41.090901",
+        "description": "7 pole DIN chassis connector, silver plated contacts",
+        "id": "4",
+        "image": "product/nys326.jpg",
+        "name": "NYS326",
+        "price": "0.5",
+        "slug": "7-Pin-Female-Panelmount",
+        "stock": "20",
+        "updated": "2019-01-17 16:32:41.090901"
+    }
+]

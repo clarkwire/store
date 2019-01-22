@@ -1,0 +1,15 @@
+[
+    {
+        "date_joined": "2019-01-17 16:04:50.145328",
+        "email": "dcollins31@gmail.com",
+        "first_name": "",
+        "id": "1",
+        "is_active": "1",
+        "is_staff": "1",
+        "is_superuser": "1",
+        "last_login": "2019-01-17 16:05:23.291224",
+        "last_name": "",
+        "password": "pbkdf2_sha256$120000$QeP31oim6yg0$slP5S93QkQ2wsXghbGWzhzchb6MvDcCp39QT8Y1wKO4=",
+        "username": "dan"
+    }
+]

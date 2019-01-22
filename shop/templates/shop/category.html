@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block metadescription %}
+{% if category %}
+{{ category.description|truncatewords:155 }}
+{% else %}
+Welcome!
+{% endif %}
+{% endblock %}
+{% block title %}
+{% if category %}
+{{ category.name }} - Clark Wire & Cable Store
+{% else %}
+See our specials!
+{% endif %}
+{% endblock %}
+{% block content %}
+<!-- Breadcrumb Navigation -->
+{% if category %}
+<div>
+    <div>
+        <p><a href="{% url 'shop:allProCat' %}">Our Products</a> | {{category.name}}</p>
+    </div>
+</div>
+{% endif %}
+<div>
+    {% if category %}
+    <img src="{{category.image.url}}" alt="{{category.name}}">
+</div>
+<br>
+<div>
+    <h1>{{category.name}}</h1>
+    <p>{{category.description}}</p>
+</div>
+{% else %}
+<img src="{% static 'img/banner.jpg' %}" alt="Our Products">
+</div>
+<br>
+<div>
+    <h1 class="text-center my_title">Our Product Collection</h1>
+    <p class="text-justify">Finding the perfect cushion for your room
+        can instantly add to the levels of comfort and sense of style
+        throughout your home. They can transform the blandest of decors
+        instantly by adding colour, softness and an air of cosiness.
+        As well as being comfy and looking great our range of cushions
+        will certainly embolden your décor with personalised charm.</p>
+</div>
+{% endif %}
+<div>
+    <div>
+        {% for product in products %}
+        <div>
+            <a href=""><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
+            <div>
+                <h4>{{product.name}}</h4>
+                <p>{{product.price}}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}
