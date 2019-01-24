@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block metadescription %}
-{% if category %}
-{{ category.description|truncatewords:155 }}
-{% else %}
-Welcome!
-{% endif %}
+	{% if category %}
+		{{ category.description|truncatewords:155 }}
+	{% else %}
+		Welcome to the cushion store where you can buy comfy and awesome cushions.
+	{% endif %}
 {% endblock %}
 {% block title %}
 {% if category %}
@@ -19,7 +19,7 @@ See our specials!
 {% if category %}
 <div>
     <div>
-        <p><a href="{% url 'shop:allProCat' %}">Our Products</a> | {{category.name}}</p>
+        <p><a href="{% url 'shop:allProCat' %}">Our Products</a>|{{category.name}}</p>
     </div>
 </div>
 {% endif %}
@@ -33,73 +33,37 @@ See our specials!
     <p>{{category.description}}</p>
 </div>
 {% else %}
+<center>
 <img src="{% static 'img/banner.jpg' %}" alt="Our Products">
+</center>
 </div>
 <br>
-{% for product in products %}
-<div class="row">
-        <div class="col-sm-6">
-<div class="card card-img-top my_image" style="width: 18rem;">
-        <a href=""><img src="{{product.image.url}}" class="card-img-top" alt="Product Image"></a>
-    <div class="card-body">
-        <h5 class="card-title">PART #: {{product.name}}</h5>
-        <p class="card-text">PRICE: ${{product.price}}</p>
-        <p class="card-text">DESCRIPTION:<br> {{product.description}}</p>
-        <p class="card-text">STOCK: {{product.stock}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-</div>
-        </div>
-</div>
+
 <div>
-    {% endfor %}
-    <!-- <div class="row mx-auto">
-			{% for product in products.object_list %}
-				<div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4">
-					<div class="card text-center" style="min-width: 18rem;">
-						<a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
-						<div class="card-body">
-							<h4>{{product.name}}</h4>
-							<p>£{{product.price}}</p>
-						</div>
-					</div>
-				</div>
-            {% endfor %}
-  -->
-    <!-- <h1 class="text-center my_title">Our Product Collection</h1>
-    <p class="text-justify">Finding the perfect cushion for your room
-        can instantly add to the levels of comfort and sense of style
-        throughout your home. They can transform the blandest of decors
-        instantly by adding colour, softness and an air of cosiness.
-        As well as being comfy and looking great our range of cushions
-        will certainly embolden your décor with personalised charm.</p>
-</div> --> 
+    <h1 class="text-center my_title">Our Products Collection</h1>
+    <p class="text-justify">
+        <center>Our product portfolio enables engineers and systems integrators to be more efficient
+            and effective desining and installing A/V systems.</center>
+    </p>
+</div>
+<br>
 {% endif %}
-<!-- <div class="container">
+<div class="container">
 		<div class="row mx-auto">
-			{% for product in products.object_list %}
+			{% for product in products %}
 				<div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4">
 					<div class="card text-center" style="min-width: 18rem;">
 						<a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
 						<div class="card-body">
-							<h4>{{product.name}}</h4>
-							<p>${{product.price}}</p>
+                            <h5 class="card-title">PART #: {{product.name}}</h5>
+                            <p class="card-text">PRICE: ${{product.price}}</p>
+                            <p class="card-text">DESCRIPTION:<br> {{product.description}}</p>
+                            <p class="card-text">STOCK: {{product.stock}}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
 						</div>
 					</div>
 				</div>
 			{% endfor %}
-<div>
-    <div>
-        {% for product in products %}
-        <div>
-            <a href=""><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
-            <div>
-                <h4>{{product.name}}</h4>
-                <p>{{product.price}}</p>
-            </div>
         </div>
-    </div> -->
-    <!-- {% endfor %} -->
-</div>
-</div>
-{% endblock %}
+        {% endblock %}
+        

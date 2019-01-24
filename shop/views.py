@@ -13,7 +13,7 @@ def index(request):
 # Category view
 
 
-def allProductCat(request, c_slug=None):
+def allProdCat(request, c_slug=None):
     c_page = None
     products_list = None
     if c_slug is not None:
